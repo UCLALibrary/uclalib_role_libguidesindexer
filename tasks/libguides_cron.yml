@@ -1,0 +1,9 @@
+---
+
+- name: Create cron job to run Lib Guides Indexer 
+  cron: 
+    user: "{{ libguides_user }}"
+    name: "LibGuides Indexer"
+    job: "source /etc/bashrc && {{ libguides_indexing_scripts_dir }}/update_libguides_index.sh {{ libguides_index_env }}"
+    minute: "{{ libguides_cron_minute }}"
+    hour: "{{ libguides_cron_hour }}"

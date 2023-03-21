@@ -1,0 +1,23 @@
+---
+
+- name: Create LibGuides user account
+  user:
+    name: "{{ libguides_user }}"
+    commment: "LibGuides Indexer Service Account"
+    shell: "/bin/bash"
+    home: "/home/{{ libguides_user }}"
+
+- name: Create LibGuides Indexer Install Directory
+  file:
+    path: "{{ libguides_base_install_path }}"
+    owner: "{{ libguides_user }}"
+    group: "{{ libguides_user }}"
+    mode: "0750"
+    state: "directory"
+
+- name: "Install pipenv utility"
+  become_user: "{{ libguides_user }}"
+  pip:
+    name: "pipenv"
+    executable: "pip3"
+    extra_args: "--user"

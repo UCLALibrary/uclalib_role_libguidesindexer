@@ -1,0 +1,17 @@
+---
+
+- import_tasks: libguides_setup.yml
+  tags:
+    - libguides-setup
+
+- import_tasks: libguides_repo_clone.yml
+  tags:
+    - libguides-repo-clone
+
+- import_tasks: libguides_config_files.yml
+  tags:
+    - libguides-config
+
+- import_tasks: libguides_cron.yml
+  tags:
+    - libguides-cron

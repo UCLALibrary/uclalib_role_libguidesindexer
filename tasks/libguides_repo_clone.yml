@@ -1,0 +1,13 @@
+---
+
+- name: Clone LibGuider into install path 
+  become_user: "{{ libguides_user }}"
+  git:
+    repo: "{{ libguider_repo }}"
+    dest: "{{ libguider_dir }}"
+
+- name: Clone LibGuides Indexer into install path 
+  become_user: "{{ libguides_user }}"
+  git:
+    repo: "{{ libguides_indexing_scripts_repo }}"
+    dest: "{{ libguides_indexing_scripts_dir }}"

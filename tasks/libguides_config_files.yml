@@ -1,0 +1,17 @@
+---
+
+- name: "Put in place ElasticSearch API Key file"
+  template:
+    src: "elasticsearch_api_key.py.j2"
+    dest: "{{ libguides_indexing_scripts_dir }}/api_keys.py"
+    owner: "{{ libguides_user }}"
+    group: "{{ libguides_user }}"
+    mode: "0640"
+
+- name: "Put in place LibGuides config file"
+  template:
+    src: "libguides_secrets.cfg.j2"
+    dest: "{{ libguides_indexing_scripts_dir }}/libguides_secrets.cfg"
+    owner: "{{ libguides_user }}"
+    group: "{{ libguides_user }}"
+    mode: "0640"

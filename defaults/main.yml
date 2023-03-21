@@ -1,0 +1,22 @@
+---
+
+libguider_repo: "https://github.com/UCLALibrary/libguider.git"
+libguides_indexing_scripts_repo: "https://github.com/UCLALibrary/libguides-indexing-scripts.git"
+
+libguides_base_install_path: "/opt/libguide"
+libguides_user: "libguides"
+
+libguider_dir: "{{ libguides_base_install_path }}/libguider"
+libguider_site_id: ""
+libguide_api_key: ""
+
+libguides_indexing_scripts_dir: "{{ libguides_base_install_path }}/libguides-indexing-scripts"
+libguides_elasticsearch_url: ""
+elasticsearch_api_key: ""
+libguides_index_env: "" # TEST || STAGE || PROD
+libguides_index_test: ""
+libguides_index_stage: ""
+libguides_index_prod: ""
+
+libguides_cron_minute: ""
+libguides_cron_hour: ""
