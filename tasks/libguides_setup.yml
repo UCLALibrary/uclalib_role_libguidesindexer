@@ -19,5 +19,5 @@
   become_user: "{{ libguides_user }}"
   pip:
     name: "pipenv"
-    executable: "pip3"
+    executable: "{{ path_to_pip_exec }}"
     extra_args: "--user"

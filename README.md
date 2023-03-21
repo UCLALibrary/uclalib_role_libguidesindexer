@@ -27,6 +27,7 @@ Role Variables
 * `libguides_index_prod`: Defines the name of the prod elasticsearch index
 * `libguides_cron_minute`: Defines the minute the cron should run
 * `libguides_cron_hour`: Defines the hour the cron should run
+* `path_to_pip_exec`: Defines the path to the python pip package manager utility
 
 
 Example Playbook
