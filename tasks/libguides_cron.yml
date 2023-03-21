@@ -1,6 +1,7 @@
 ---
 
 - name: Create cron job to run Lib Guides Indexer 
+  become_user: "{{ libguides_user }}"
   cron: 
     user: "{{ libguides_user }}"
     name: "LibGuides Indexer"
