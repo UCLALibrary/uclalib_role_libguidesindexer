@@ -4,6 +4,6 @@
   cron: 
     user: "{{ libguides_user }}"
     name: "LibGuides Indexer"
-    job: "source /etc/bashrc && {{ libguides_indexing_scripts_dir }}/update_libguides_index.sh {{ libguides_index_env }}"
+    job: "source /etc/bashrc && {{ libguides_indexing_scripts_dir }}/update_libguides_index.sh {{ libguides_index_env }} > {{ libguides_base_install_path }}/libguides_indexer_cron.log 2>&1"
     minute: "{{ libguides_cron_minute }}"
     hour: "{{ libguides_cron_hour }}"
