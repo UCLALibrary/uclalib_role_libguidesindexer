@@ -15,7 +15,7 @@
     mode: "0750"
     state: "directory"
 
-- name: "Install pipenv utility"
+- name: Install pipenv utility
   become_user: "{{ libguides_user }}"
   pip:
     name: "pipenv"
