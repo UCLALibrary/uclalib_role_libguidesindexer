@@ -20,3 +20,5 @@ libguides_index_prod: ""
 
 libguides_cron_minute: ""
 libguides_cron_hour: ""
+
+path_to_pip_exec: ""
