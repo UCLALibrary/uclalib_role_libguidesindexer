@@ -3,7 +3,7 @@
 - name: Create LibGuides user account
   user:
     name: "{{ libguides_user }}"
-    commment: "LibGuides Indexer Service Account"
+    comment: "LibGuides Indexer Service Account"
     shell: "/bin/bash"
     home: "/home/{{ libguides_user }}"
 
